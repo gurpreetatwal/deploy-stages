@@ -19,7 +19,5 @@ jobs:
       deploy:
         provider: script
         script: echo "deploy"
-        provider: npm
-        api_key: $NPM_API_KEY
         on:
           branch: master
