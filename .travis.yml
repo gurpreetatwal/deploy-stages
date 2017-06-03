@@ -17,6 +17,10 @@ jobs:
   include:
     - stage: coverage
       script: echo "run coverage"
+      node_js:
+        - 8
+        - 6
+        - 4
     - stage: npm release
       node_js: 6
       script: echo "Deploying to npm ..."
