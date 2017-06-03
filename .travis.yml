@@ -1,0 +1,23 @@
+language:
+  - node_js
+
+node_js:
+  - 'node'
+  - '6'
+  - '4'
+
+
+script: echo "Running tests against $(node -v) ..."
+
+jobs:
+  include:
+    - stage: npm release
+      node_js: 6
+      script: echo "Deploying to npm ..."
+      deploy:
+        provider: script
+        script: echo "deploy"
+        provider: npm
+        api_key: $NPM_API_KEY
+        on:
+          branch: master
