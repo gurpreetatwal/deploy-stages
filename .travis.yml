@@ -6,6 +6,10 @@ node_js:
   - '6'
   - '4'
 
+env:
+  - STEP=lint
+  - STEP=test
+  - STEP=cover
 
 script: echo "Running tests against $(node -v) ..."
 
